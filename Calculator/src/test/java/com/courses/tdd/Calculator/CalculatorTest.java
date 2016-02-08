@@ -43,14 +43,14 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void divide_2Values_ValidOperation () {
+	public void divide_2Values_ValidOperation () throws DivideByZeroException{
 		double result = calc.divide(OPERAND_A, OPERAND_B);
 		assertEquals(OPERAND_A / OPERAND_B, result, 0d);
 		assertEquals(OPERAND_A / OPERAND_B, calc.getResult(), 0d);
 	}
 	
-	@Test(expected=ArithmeticException.class)
-	public void divide_By_Zero_Exception () {
+	@Test(expected=DivideByZeroException.class)
+	public void divide_By_Zero_Exception () throws DivideByZeroException{
 		double result = calc.divide(OPERAND_A, 0.0d);
 		fail("Divide by zero should have failed. Result = " + result);
 	}

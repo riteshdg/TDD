@@ -34,9 +34,9 @@ public class Calculator {
 		return result;
 	}
 
-	public double divide(double operandA, double operandB) {
+	public double divide(double operandA, double operandB) throws DivideByZeroException {
 		if (operandB == 0.0d)
-			throw new ArithmeticException("Exception: Divide by zero not allowed");
+			throw new DivideByZeroException("Exception: Divide by zero not allowed");
 		result = operandA / operandB;
 		return result;
 	}
