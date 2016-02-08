@@ -20,25 +20,21 @@ public class Calculator {
 	}
 
 	public double add(double operandA, double operandB) {
-		// TODO Auto-generated method stub
 		result = operandA + operandB;
 		return result;
 	}
 
 	public double subtract(double operandA, double operandB) {
-		// TODO Auto-generated method stub
 		result = operandA - operandB;
 		return result;
 	}
 
 	public double multiply(double operandA, double operandB) {
-		// TODO Auto-generated method stub
 		result = operandA * operandB;
 		return result;
 	}
 
 	public double divide(double operandA, double operandB) {
-		// TODO Auto-generated method stub
 		if (operandB == 0.0d)
 			throw new ArithmeticException("Exception: Divide by zero not allowed");
 		result = operandA / operandB;
